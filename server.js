@@ -11,7 +11,7 @@ cloudinary.v2.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-app.listen(PORT, async () => {
+app.listen(PORT, '0.0.0.0', async () => {
   await connectDb();
   console.log(`App is running on port ${PORT}`);
 });
