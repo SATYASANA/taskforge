@@ -6,7 +6,7 @@ import app from "./app.js";
 import cloudinary from "cloudinary";
 import { connectDb } from "./config/db.conn.js";
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 10000;
 const totalCpus = os.cpus().length;
 
 cloudinary.v2.config({
