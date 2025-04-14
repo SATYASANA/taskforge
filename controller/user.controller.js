@@ -73,7 +73,8 @@ return res.status(200).json({
 }
 
 export const loginUser = async(req,res,next)=>{
-    const {email,password} = req.body;
+    try {
+        const {email,password} = req.body;
     console.log("email is",email)
     const verifyUser = await User.findOne({email});
     if(!verifyUser){
@@ -102,6 +103,12 @@ export const loginUser = async(req,res,next)=>{
         message:'user logged in success fully'
     })
 
+    } catch (error) {
+        return res.status(400).json({
+            success:false,
+            message:error.message
+        })
+    }
 }
 
 export const logoutUser = async (req,res,next)=>{
