@@ -8,11 +8,11 @@ const app = express();
 
 
 app.use(cors({
-  origin: "https://taskinforge.netlify.app/",
+  origin: "https://taskinforge.netlify.app",
   credentials: true,
 }));
 
-app.options("*", cors());
+
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
