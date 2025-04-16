@@ -17,8 +17,6 @@ app.use(cors({
 app.use('/api/v1',userRouter)
 app.use('/api/v1/task',userTask)
 
-  
-
 export default app;
 
 

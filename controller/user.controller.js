@@ -130,3 +130,25 @@ export const logoutUser = async (req,res,next)=>{
     })
    }
 }
+
+export const getCurrentUser = async (req,res,next)=>{
+    try {
+        const {userId,role} = req.user
+        const userInfo = await User.findById(userId);
+        if(!userInfo){
+            return res.status(400).json({
+                success:false
+            })
+        }
+        return res.status(200).json({
+            success:true,
+            role,
+            userInfo
+        })
+    } catch (error) {
+        return res.status(400).json({
+            success:false,
+            message:error.message
+        })
+    }
+}
