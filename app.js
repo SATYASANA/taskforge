@@ -14,7 +14,7 @@ app.use(cookieParser())
 
 const allowedOrigins = [
   "http://localhost:5173",                  // local dev
-  "https://your-frontend-site.netlify.app" // Netlify domain
+  "https://taskinforge.netlify.app/" // Netlify domain
 ];
 
 app.use(cors({
