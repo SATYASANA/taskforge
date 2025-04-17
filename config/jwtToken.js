@@ -23,10 +23,10 @@ export const generateJWTToken = (userId, role, res) => {
 
   res.cookie('token', token, {
     httpOnly: true,
-    secure: isProduction, // true if production, false if development
-    sameSite: isProduction ? 'None' : 'Lax', // 'None' for cross-origin, 'Lax' for same-origin in development
+    secure: true,
+    sameSite: 'None',
     maxAge: 24 * 60 * 60 * 1000, // 1 day
-     domain: 'https://taskinforge.netlify.app'
+    domain: 'taskinforge.netlify.app'
   });
   res.send({status:"success"})
 };
