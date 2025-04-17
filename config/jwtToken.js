@@ -26,7 +26,7 @@ export const generateJWTToken = (userId, role, res) => {
     secure: true,
     sameSite: 'None',
     maxAge: 24 * 60 * 60 * 1000, // 1 day
-    domain: 'taskinforge.netlify.app'
+   
   });
 
 };
