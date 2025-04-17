@@ -86,9 +86,7 @@ export const loginUser = async(req,res,next)=>{
     const comparePassword = await bcrypt.compare(password,verifyUser.password)
     if(comparePassword){
         try {
-            generateJWTToken(verifyUser._id,verifyUser.role,res
-
-            );
+            generateJWTToken(verifyUser._id,verifyUser.role,res);
 
         } catch (error) {
             return res.status(400).json({
