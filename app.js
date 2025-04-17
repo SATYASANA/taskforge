@@ -8,7 +8,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: "https://taskinforge.netlify.app/",
+  origin: "https://taskinforge.netlify.app",
   credentials: true,
 }));
 
