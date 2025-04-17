@@ -26,5 +26,7 @@ export const generateJWTToken = (userId, role, res) => {
     secure: isProduction, // true if production, false if development
     sameSite: isProduction ? 'None' : 'Lax', // 'None' for cross-origin, 'Lax' for same-origin in development
     maxAge: 24 * 60 * 60 * 1000, // 1 day
+     domain: 'https://taskinforge.netlify.app'
   });
+  res.send({status:"success"})
 };
