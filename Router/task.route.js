@@ -8,5 +8,5 @@ const userTask = express.Router();
 userTask.post('/create-task',verifyToken,createTask)
 userTask.get('/active-task',verifyToken,activeTask)
 userTask.get('/today-task',verifyToken,todayTask)
-userTask.get('/all-task',verifyToken, authorizedRoles('USER'),allTask)
+userTask.get('/all-task',verifyToken,allTask)
 export default userTask
