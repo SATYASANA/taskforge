@@ -61,8 +61,7 @@ export const registerUser = async (req,res,next)=>{
     }
 return res.status(200).json({
     success:true,
-    message:"user logged in successfully",
-    role:verifyUser.role
+    message:"user logged in successfully"
 })
    } catch (error) {
     return res.status(400).json({
@@ -101,8 +100,7 @@ export const loginUser = async(req,res,next)=>{
    
     return res.status(200).json({
         success:true,
-        message:'user logged in success fully',
-        role: verifyUser.role,
+        message:'user logged in success fully'
     })
 
     } catch (error) {
