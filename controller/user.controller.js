@@ -61,7 +61,8 @@ export const registerUser = async (req,res,next)=>{
     }
 return res.status(200).json({
     success:true,
-    message:"user logged in successfully"
+    message:"user logged in successfully",
+    role:verifyUser.role
 })
    } catch (error) {
     return res.status(400).json({
